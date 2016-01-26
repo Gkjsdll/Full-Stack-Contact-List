@@ -1,10 +1,11 @@
 $(document).ready(init);
 
 function init(){
-  $("#newContactForm").find("button").click(createContact);
+  $("#newContactForm").submit(createContact);
 }
 
 function createContact(e){
+  e.preventDefault();
   var contact = {};
   contact.fullName = $("#firstName").val() + " " + $("#lastName").val();
   contact.phone = $("#phone").val();
@@ -12,6 +13,8 @@ function createContact(e){
   contact.email = $("#email").val();
   $.post("/addUser", contact)
   .success(function(){
+    console.log("Post successful");
+    window.location.href = "/";
     //add contact to the DOM
   })
   .fail(function(err){

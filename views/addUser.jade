@@ -4,14 +4,13 @@ block headAdditions
   link(rel="stylesheet" href="/stylesheets/addUser.css")
 
 block content
-  div.col-xs-10.col-xs-offset-1#newContactForm
-    form
-    div.row.col-xs-offset-2
-        input.col-xs-2#firstName(type="text" placeholder="First Name" required)
-        input.col-xs-2#lastName(type="text" placeholder="Last Name" required)
-        input.col-xs-2#phone(type="text" placeholder="Phone #" required)
-        input.col-xs-3#address(type="text" placeholder="Street Address" required)
-        input.col-xs-3#email(type="text" placeholder="E-Mail" required)
-        button.col-xs-12(type="submit") Add Contact
-        
+  div.col-xs-10.col-xs-offset-1#newContactFormContainer
+    form#newContactForm
+      div.row.col-xs-offset-2
+          input.col-xs-2#firstName(type="text" placeholder="First Name" required)
+          input.col-xs-2#lastName(type="text" placeholder="Last Name" required)
+          input.col-xs-2#phone(type="text" placeholder="Phone #" required)
+          input.col-xs-3#address(type="text" placeholder="Street Address" required)
+          input.col-xs-3#email(type="text" placeholder="E-Mail" required)
+          input.col-xs-12(type="submit" value="Add Contact")
 block scripts

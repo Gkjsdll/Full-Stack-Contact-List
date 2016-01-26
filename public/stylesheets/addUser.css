@@ -7,11 +7,11 @@ body {
   text-align: center;
 }
 
-#newContactForm input {
+#newContactFormContainer input {
   padding: 2px 2px 2px 2px;
 }
 
-#newContactForm {
+#newContactFormContainer {
   margin: calc(24px + 3vh) 0px 0px 0px;
   padding: 0px 0px 0px 0px;
   min-width: 650px;
