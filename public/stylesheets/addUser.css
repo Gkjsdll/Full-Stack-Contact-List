@@ -1,0 +1,9 @@
+body {
+  min-width: 430px;
+  text-align: center;
+}
+
+#newContactForm {
+  margin: calc(24px + 3vh) 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}

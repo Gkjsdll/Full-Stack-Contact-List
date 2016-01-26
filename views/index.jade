@@ -1,0 +1,16 @@
+extends layout
+
+block links
+  link(rel='stylesheet', href='/stylesheets/style.css')
+
+block content
+  a#addContact(href="/addUser")
+    div Create New Contact
+  table
+    tbody
+      tr
+        th Contacts
+      tr
+        td John Doe
+  script(src="https://code.jquery.com/jquery-2.2.0.min.js")
+  script(src="javascripts/main.js")
