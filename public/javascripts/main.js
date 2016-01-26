@@ -12,9 +12,7 @@ function popContacts() {
       for(key in contacts){
         var contact = $("<tr>").addClass("contact");
         contact.append($('<td>').text(contacts[key].fullName));
-        contact.data("phone", contacts[key].phone);
-        contact.data("address", contacts[key].address);
-        contact.data("email", contacts[key].email);
+        contact.data("contactData", contacts[key])
         $contacts.push(contact);
       }
       $("#contactList").append($contacts);
