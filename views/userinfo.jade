@@ -1,0 +1,13 @@
+extends layout
+
+block headAdditions
+  link(rel='stylesheet' href='/stylesheets/userInfo.css')
+
+block content
+  p #{user.fullName}
+  p #{user.address}
+  p #{user.phone}
+  p #{user.email}
+  a(href="/") View all contacts
+  script(src="https://code.jquery.com/jquery-2.2.0.min.js")
+  //- script(src="javascripts/userInfo.js")

@@ -1,6 +1,7 @@
 $(document).ready(init);
 
 function init(){
+  $("tbody").on("click", "tr", viewUser);
   popContacts();
 }
 
@@ -9,10 +10,10 @@ function popContacts() {
     .success(function(data){
       var contacts = JSON.parse(data);
       var $contacts = [];
-      for(key in contacts){
-        var contact = $("<tr>").addClass("contact");
+      for(key in contacts) {
+        var contact = $("<tr>").addClass("contact no-select");
         contact.append($('<td>').text(contacts[key].fullName));
-        contact.data("contactData", contacts[key])
+        contact.data("index", key);
         $contacts.push(contact);
       }
       $("#contactList").append($contacts);
@@ -21,4 +22,9 @@ function popContacts() {
       console.log("Fucked Up!");
     })
 
+}
+
+function viewUser(e){
+  e.stopPropagation();
+  location.href = "/userinfo/"+$(this).data("index");
 }
