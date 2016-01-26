@@ -1,6 +1,6 @@
 extends layout
 
-block links
+block headAdditions
   link(rel="stylesheet" href="/stylesheets/addUser.css")
 
 block content
@@ -8,7 +8,7 @@ block content
     form
     div.row.col-xs-offset-2
         input.col-xs-2#firstName(type="text" placeholder="First Name" required)
-        input.col-xs-2#lastname(type="text" placeholder="Last Name" required)
+        input.col-xs-2#lastName(type="text" placeholder="Last Name" required)
         input.col-xs-2#phone(type="text" placeholder="Phone #" required)
         input.col-xs-3#address(type="text" placeholder="Street Address" required)
         input.col-xs-3#email(type="text" placeholder="E-Mail" required)

@@ -10,6 +10,12 @@ function createContact(e){
   contact.phone = $("#phone").val();
   contact.address = $("#address").val();
   contact.email = $("#email").val();
-  
-  console.log(JSON.stringify(contact));
+  $.post("/addUser", contact)
+  .success(function(){
+    //add contact to the DOM
+  })
+  .fail(function(err){
+    alert("Error – See console for details");
+    console.log(JSON.stringify(err));
+  })
 }
