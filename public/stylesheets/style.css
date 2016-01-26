@@ -26,3 +26,7 @@ td:hover {
   background-color: rgb(220, 220, 220);
   cursor: pointer;
 }
+
+.contact {
+  width: 100%;
+}

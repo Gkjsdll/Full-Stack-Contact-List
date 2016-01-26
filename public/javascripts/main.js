@@ -1,10 +1,23 @@
 $(document).ready(init);
 
 function init(){
-  $('#addContact').click(goAddContact);
+  popContacts();
 }
 
-function goAddContact() {
-    var contact = {};
-    
+function popContacts() {
+    $.get("/contacts.js")
+    .success(function(data){
+      var contacts = JSON.parse(data);
+      var $contacts = [];
+      for(key in contacts){
+        var contact = $("<tr>").addClass("contact");
+        contact.append($('<td>').text(contacts[key].fullName));
+        $contacts.push(contact);
+      }
+      $("#contactList").append($contacts);
+    })
+    .fail(function(){
+      console.log("Fucked Up!");
+    })
+
 }
